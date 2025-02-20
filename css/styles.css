@@ -29,8 +29,8 @@ body.dark-mode {
     color: var(--primary-font-color);
 }
 
-.dark-mode-button i {
-    font-size: 1rem;
+.dark-mode-button {
+    font-size: 1.2vw;
     font-weight: 500;
     cursor: pointer;
 }
@@ -67,66 +67,72 @@ nav.scrolled {
 
 .logo span {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
 }
 
 .navbar .logo .logo-icon {
     margin-right: 10px;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     font-weight: bold;
 }
 
 .navbar .menu ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1vw;
 }
 
+.navbar .menu ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .navbar .menu ul li a {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     color: var(--primary-font-color);
     transition: transform 0.3 ease-in-out;
 }
 
 .navbar .menu ul li a:hover {
     color: #000000;
-    transform: scale(1.4);
+    transform: scale(1.05);
 }
 
 /* Home Section */
 
 .home-section {
-    position: relative;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     height: 90vh;
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
-.home-section .coding-svg img {
-    height: 40vh;
+.home-section img {
+    height: max-content;
     width: 40vw;
-    padding-right: -500px;
-    padding-bottom: -200px;
-    flex: 1;
+    
 }
 
 .home-section h1 {
-    font-size: 66px;
+    font-size: 5vw;
     font-weight: 600;
-    flex: 1;
     padding: 30px;
     line-height: 1.2;
     color: var(--primary-font-color);
+    width: max-content;
+    height: max-content;
+    
 }
 
 .cursor {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 66px;
-    color: var(--primary-font-color);
-    animation: blink 0.7s infinite;
+    font-weight: 200;
+    animation: blink 0.7s infinite  linear;
+}
+
+/* About Page */
+
+.about-section {
+    height: 100vh;
 }
