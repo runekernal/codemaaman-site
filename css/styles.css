@@ -38,6 +38,7 @@ body.dark-mode {
 main {
     padding-left: 10vw;
     padding-right: 10vw;
+    margin-top: -10vh;
 }
 
 /* Navbar Section */
@@ -67,12 +68,12 @@ nav.scrolled {
 
 .logo span {
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 1.8vw;
 }
 
 .navbar .logo .logo-icon {
     margin-right: 10px;
-    font-size: 1.2vw;
+    font-size: 1.8vw;
     font-weight: bold;
 }
 
@@ -104,9 +105,10 @@ nav.scrolled {
 .home-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 90vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
+    
 }
 
 .home-section img {
@@ -116,7 +118,7 @@ nav.scrolled {
 }
 
 .home-section h1 {
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 600;
     padding: 30px;
     line-height: 1.2;
@@ -134,5 +136,13 @@ nav.scrolled {
 /* About Page */
 
 .about-section {
+    padding-top: 10vh;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.about-section h1 {
+    grid-column: 1fr;
 }
