@@ -1,81 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/styles.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+      />
+      <title>CodeMaaman</title>
+   </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
-    <title>CodeMaaman</title>
-</head>
-
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
+   <body>
+      <!-- Navigation Bar -->
+      <nav class="navbar">
+         <div class="logo">
             <i class="ri-terminal-fill logo-icon"></i>
             <span>CodeMaaman</span>
-        </div>
-        <div class="menu">
+         </div>
+         <div class="menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><i class="ri-moon-line dark-mode-button"
-                            id="dark-mode-icon"></i></li>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#events">Events</a></li>
+               <li><a href="#contact">Contact Us</a></li>
+               <li>
+                  <i
+                     class="ri-moon-line dark-mode-button"
+                     id="dark-mode-icon"
+                  ></i>
+               </li>
             </ul>
-        </div>
-    </nav>
+         </div>
+      </nav>
 
-    <main>
-        <!-- Home Section -->
-        <section class="home-section" id="home">
-            <h1 class="text">Learn.<br>
-                Code.<br>
-                <span class="dynamic-text"></span><span class="cursor">|</span>
+      <main>
+         <!-- Home Section -->
+         <section class="home-section" id="home">
+            <h1 class="text">
+               Learn.<br />
+               Code.<br />
+               <span class="dynamic-text"></span><span class="cursor">|</span>
             </h1>
-            
-                <img src="assets/coding-light.svg" alt="">
-                    
-            
-        </section>
 
-        <!-- About Section -->
-        <section class="about-section" id="about">
-            <h1>About</h1>
-            <img src="./assets/team-light.svg" alt="" class="team-svg">
-            <p>Welcome to CodeMaaman, a vibrant and inclusive community designed for enthusiastic coders who are passionate about honing their skills, collaborating on innovative projects, and participating in exciting hackathons. Whether you're a seasoned developer or just starting your coding journey, CodeMaaman is the perfect place to grow, learn, and connect with like-minded individuals.
-            </p>
-        </section>
+            <img src="assets/coding-light.svg" alt="" />
+         </section>
 
-        <!-- Events Section -->
-        <section class="event-section" id="events">
-            <div class="event-cards">
-                <div class="card">Event 1</div>
-                <div class="card">Event 2</div>
-                <div class="card">Event 3</div>
+         <!-- About Section -->
+         <section class="about-section" id="about">
+            <h1 class="about">About</h1>
+            <div class="about-container">
+               <img src="assets/team-light.svg" alt="" class="team-svg" />
+               <p class="about-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Reiciendis voluptas id temporibus minus accusantium blanditiis
+                  obcaecati aspernatur dolores debitis laboriosam ipsam sed
+                  consectetur vel corrupti optio amet, enim libero illo!
+               </p>
             </div>
-        </section>
+         </section>
 
-        <!-- Contact Section -->
+         <!-- Events Section -->
+         <section class="event-section" id="events">
+            <h1 class="events-heading">Events</h1>
+            <div class="event-cards">
+               <div class="card">
+                  <img src="" alt="" class="card-image">
+                  <div class="card-contents">
+                     <div class="card-tags">
+                        <p class="tag">UX Design</p>
+                        <p class="tag">Product Design</p>
+                     </div>
+                     <h2 class="card-title"></h2>
+                     <p class="card-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ullam?</p>
+                     <button class="card-button">Join now</button>
+                  </div>
+               </div>
+            </div>
+         </section>
 
-        <section class="contct-section" id="contact">
+         <!-- Contact Section -->
+
+         <section class="contct-section" id="contact">
             <h2>Contact Us</h2>
             <div class="contact-info">
-                <p><i class="ri-phone-line"></i> +91 12345 67890</p>
-                <p><i class="ri-mail-line"></i>contactus@codemaaman.com</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/codemaanam"><i class="ri-instagram-line"></i></a>
-                    <a href="https://www.x.com/codemaana"><i class="ri-twitter-x-line"></i></a>
-                    <a href="https://www.facebook.com/codemaaman"><i class="ri-facebook-line"></i></a>
-                </div>
+               <p><i class="ri-phone-line"></i> +91 12345 67890</p>
+               <p><i class="ri-mail-line"></i>contactus@codemaaman.com</p>
+               <div class="social-icons">
+                  <a href="https://www.instagram.com/codemaanam"
+                     ><i class="ri-instagram-line"></i
+                  ></a>
+                  <a href="https://www.x.com/codemaana"
+                     ><i class="ri-twitter-x-line"></i
+                  ></a>
+                  <a href="https://www.facebook.com/codemaaman"
+                     ><i class="ri-facebook-line"></i
+                  ></a>
+               </div>
             </div>
-        </section>
+         </section>
+      </main>
 
-    </main>
-
-    <script src="js/scripts.js"></script>
-</body>
-
+      <script src="js/scripts.js"></script>
+   </body>
 </html>

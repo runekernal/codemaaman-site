@@ -5,6 +5,7 @@ const darkModeIcon = document.getElementById('dark-mode-icon');
 darkModeIcon.addEventListener('click', () => {
   isDarkModeOn = !isDarkModeOn;
   if (isDarkModeOn) {
+    
     document.documentElement.style.setProperty("--background-color", "black");
     document.documentElement.style.setProperty("--primary-font-color", "#EEEEEE");
     darkModeIcon.classList.replace('ri-moon-line', 'ri-sun-line');
