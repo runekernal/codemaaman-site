@@ -37,6 +37,7 @@ body.dark-mode {
    font-size: 1.8vw;
    font-weight: 500;
    cursor: pointer;
+   background-color: transparent;
 }
 
 main {
@@ -51,19 +52,19 @@ main {
    align-items: center;
    padding-inline: 1rem 2rem;
    position: sticky;
-   background-color: var(--background-color);
+   /* background-color: var(--background-color); */
+   backdrop-filter: blur(1000px);
    top: 0;
    border-bottom: 1px solid #ccc;
    height: 10vh;
    justify-content: space-between;
-   transition: border-bottom 0.3s ease-in-out;
    padding-left: 10vw;
    padding-right: 10vw;
    z-index: 1000;
 }
 
 nav.scrolled {
-   border-bottom: 1px cadetblue;
+   border-bottom: none;
 }
 
 .navbar .logo {
