@@ -5,7 +5,7 @@ const darkModeIcon = document.getElementById('dark-mode-icon');
 darkModeIcon.addEventListener('click', () => {
   isDarkModeOn = !isDarkModeOn;
   if (isDarkModeOn) {
-    
+
     document.documentElement.style.setProperty("--background-color", "black");
     document.documentElement.style.setProperty("--primary-font-color", "#EEEEEE");
     darkModeIcon.classList.replace('ri-moon-line', 'ri-sun-line');
@@ -19,18 +19,18 @@ darkModeIcon.addEventListener('click', () => {
 
 // onScroll
 window.addEventListener("scroll", function () {
-    const nav = document.querySelector("nav");
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
+  const nav = document.querySelector("nav");
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
 });
-  
+
 
 // TypeWriter
 const dynamicText = document.querySelector('.dynamic-text');
-const words = ["Grow.", "Innovate.", "Succeed."];
+const words = ["Grow.", "Innovate.", "Succeed.", "Collaborate."];
 let wordIndex = 0;
 let charIndex = 0;
 
@@ -57,3 +57,57 @@ const eraseEffect = () => {
 };
 
 typeEffect();
+
+// Section Highligting
+
+const navbar = document.querySelector('.navbar');
+const links = document.querySelectorAll('.navbar .menu ul li a');
+const highlight = document.querySelector('.navbar .menu .highlight');
+
+links[0].classList.add('active');
+
+const activeNavButton = () => {
+  const activeHash = window.location.hash;
+  const links = document.querySelectorAll('.navbar .menu ul li a');
+  links.forEach((link) => {
+    if (link.hash === activeHash) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+
+let isScrolling;
+window.addEventListener("scroll", () => {
+  clearTimeout(isScrolling);
+  isScrolling = setTimeout(activeNavButton, 100);
+});
+
+function updateHashOnScroll() {
+  const sections = document.querySelectorAll("section");
+  let scrollPosition = window.scrollY;
+  let buffer = window.innerHeight * 0.1
+  let navbarHieght = document.querySelector("nav").offsetHeight
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const adjustedSectionTop = sectionTop - navbarHieght
+    if (scrollPosition >= adjustedSectionTop - buffer && scrollPosition < sectionTop + sectionHeight) {
+      const newHash = "#" + section.id;
+      if (window.location.hash !== newHash) {
+        history.replaceState(null, null, newHash);
+        activeNavButton();
+      }
+    }
+  });
+}
+
+window.addEventListener("scroll", updateHashOnScroll);
+
+
+
+window.addEventListener("hashchange", activeNavButton);
+

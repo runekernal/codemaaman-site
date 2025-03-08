@@ -19,7 +19,7 @@ body {
    font-weight: 400;
    background-color: var(--background-color);
    color: var(--primary-font-color);
-   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+   transition: background-color 0.4s ease-in, color 0.4s ease-in;
 }
 
 body.dark-mode {
@@ -31,18 +31,16 @@ body.dark-mode {
    background-color: var(--background-color);
    border: none;
    color: var(--primary-font-color);
-}
-
-.dark-mode-button {
-   font-size: 1.8vw;
+   transition: color 0.4s ease-in;
+   font-size: 1.8rem;
    font-weight: 500;
    cursor: pointer;
    background-color: transparent;
 }
 
 main {
-   padding-left: 10vw;
-   padding-right: 10vw;
+   padding-left: 10rem;
+   padding-right: 10rem;
    margin-top: -10vh;
 }
 
@@ -50,21 +48,25 @@ main {
 .navbar {
    display: flex;
    align-items: center;
-   padding-inline: 1rem 2rem;
    position: sticky;
-   /* background-color: var(--background-color); */
    backdrop-filter: blur(1000px);
    top: 0;
    border-bottom: 1px solid #ccc;
-   height: 10vh;
+   height: 5rem;
    justify-content: space-between;
-   padding-left: 10vw;
-   padding-right: 10vw;
+   padding-left: 10rem;
+   padding-right: 10rem;
    z-index: 1000;
+   transition: all 0.3s ease-in-out;
 }
 
 nav.scrolled {
-   border-bottom: none;
+   border: 1px solid #ccc;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   margin: 0 6rem 0 6rem;
+   top: 2rem;
+   border-radius: 50px;
 }
 
 .navbar .logo {
@@ -74,19 +76,18 @@ nav.scrolled {
 
 .logo span {
    font-weight: bold;
-   font-size: 1.8vw;
+   font-size: 1.8rem;
 }
 
 .navbar .logo .logo-icon {
    margin-right: 10px;
-   font-size: 1.8vw;
+   font-size: 1.8rem;
    font-weight: bold;
 }
 
 .navbar .menu ul {
    list-style: none;
    display: flex;
-   gap: 1vw;
 }
 
 .navbar .menu ul li {
@@ -97,14 +98,23 @@ nav.scrolled {
 
 .navbar .menu ul li a {
    text-decoration: none;
-   font-size: 1.8vw;
+   font-size: 1.8rem;
    color: var(--primary-font-color);
-   transition: transform 0.3 ease-in-out;
+   transition: border-color 0.3s ease-in;
+   padding: 0.5rem 1rem;
+   border: 1px solid;
+   border-color: #00000000;
+   border-radius: 50px;
 }
 
 .navbar .menu ul li a:hover {
    color: #000000;
-   transform: scale(1.05);
+}
+
+.navbar .menu ul li a.active {
+   border: 1px solid #ccc;
+   border-radius: 50px;
+   padding: 0.5rem 1rem;
 }
 
 /* Home Section */
@@ -144,12 +154,13 @@ nav.scrolled {
 }
 
 .about-section {
-   min-height: 100vh;
+   min-height: 90vh;
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: 1fr 10fr;
    align-items: center;
    clear: var(--primary-font-color);
+   padding-top: 1rem;
 }
 
 .about-section .about-container {
@@ -172,3 +183,22 @@ nav.scrolled {
 }
 
 /* Events Section */
+
+.event-section {
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 10fr;
+   align-items: center;
+   clear: var(--primary-font-color);
+}
+
+/* Contact Section */
+.contact-section {
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 10fr;
+   align-items: center;
+   clear: var(--primary-font-color);
+}
