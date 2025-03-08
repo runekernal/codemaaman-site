@@ -5,9 +5,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="css/styles.css" />
       <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
       />
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
       <title>CodeMaaman</title>
    </head>
 
@@ -50,18 +51,74 @@
          <section class="about-section" id="about">
             <h1 class="about">About</h1>
             <ul>
-               <li>codemaaman</li>
-               <li>Mission</li>
-               <li>vision</li>
+               <li data-tab-head="#codemaaman" class="active">codemaaman</li>
+               <li data-tab-head="#mission">Mission</li>
+               <li data-tab-head="#vision">vision</li>
             </ul>
             <div class="about-container">
-               <img src="assets/team-light.svg" alt="" class="team-svg" />
+               <div id="codemaaman" data-tab-content class="active">
+                  <lord-icon
+                     src="assets/lotte/command-line.json"
+                     trigger="loop"
+                  ></lord-icon>
+                  <p class="about-text">
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                     Tempore dignissimos eaque quas. Ducimus suscipit unde
+                     magnam voluptatem. Eveniet ipsa optio eius, id fugit ut
+                     repudiandae est, harum illo accusamus nemo nesciunt ex
+                     voluptas ratione voluptate rem repellat doloremque. Illo
+                     labore ex unde, ipsam quibusdam nam. Reiciendis deleniti
+                     ratione quod iusto rem neque dolores, maiores aspernatur
+                     sint ducimus quos, ullam ipsa. Tempora cum at ut quod
+                     laudantium nam dolor aliquid cupiditate mollitia ex
+                     voluptatibus nulla aperiam, aspernatur voluptatem,
+                     accusamus rerum cumque veniam impedit quis illum pariatur
+                     quibusdam laboriosam facilis quam! Animi quam quidem nam
+                     provident neque pariatur, itaque quibusdam doloribus totam.
+                  </p>
+               </div>
+               <div id="mission" data-tab-content>
+                  <lord-icon
+                  src="assets/lotte/aim.json"
+                  trigger="loop"
+               ></lord-icon>                  
                <p class="about-text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Reiciendis voluptas id temporibus minus accusantium blanditiis
-                  obcaecati aspernatur dolores debitis laboriosam ipsam sed
-                  consectetur vel corrupti optio amet, enim libero illo!
-               </p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Dignissimos inventore sit quibusdam laboriosam minus ea
+                     tenetur debitis cumque delectus accusamus expedita est
+                     excepturi sunt commodi sapiente cum nobis quidem, fugiat
+                     adipisci nihil optio perspiciatis. Excepturi officia
+                     laudantium atque alias ab perspiciatis recusandae.
+                     Dignissimos iste nobis exercitationem laboriosam nostrum
+                     inventore et repellat. Alias minima soluta nemo? Nobis
+                     vitae sapiente quas repudiandae ab accusantium. Corrupti ad
+                     odit nostrum cum praesentium debitis neque quasi
+                     blanditiis, placeat officia. Nostrum labore repellat odio
+                     magnam, fugiat harum consequatur, maiores enim earum neque
+                     repellendus officiis eaque molestias laboriosam inventore!
+                     Similique quos neque laboriosam quod deleniti vel eos!
+                  </p>
+               </div>
+               <div id="vision" data-tab-content>
+                  <lord-icon
+                  src="assets/lotte/vision.json"
+                  trigger="loop"
+               ></lord-icon>                  <p class="about-text">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Totam minima praesentium enim sint dicta? Placeat quod
+                     quidem illum labore iure iusto dicta harum deleniti, beatae
+                     quibusdam. Quos eligendi accusamus explicabo modi mollitia
+                     dolore animi tempora a. Magni ea velit quisquam voluptatum,
+                     minus quidem inventore? Delectus alias laborum assumenda
+                     soluta, voluptatibus a nemo quidem sunt veniam hic vel
+                     autem! Nostrum non aut eos, tempore ullam voluptatibus.
+                     Porro ipsum reiciendis ut, doloremque et iusto. Temporibus
+                     optio eaque amet porro sapiente, corporis, maiores
+                     exercitationem maxime accusamus tenetur dolorum similique
+                     harum numquam veritatis est cum libero tempore quia
+                     pariatur incidunt dolorem expedita. Adipisci, temporibus.
+                  </p>
+               </div>
             </div>
          </section>
 
@@ -70,14 +127,17 @@
             <h1 class="events-heading">Events</h1>
             <div class="event-cards">
                <div class="card">
-                  <img src="" alt="" class="card-image">
+                  <img src="" alt="" class="card-image" />
                   <div class="card-contents">
                      <div class="card-tags">
                         <p class="tag">UX Design</p>
                         <p class="tag">Product Design</p>
                      </div>
                      <h2 class="card-title"></h2>
-                     <p class="card-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ullam?</p>
+                     <p class="card-details">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Obcaecati, ullam?
+                     </p>
                      <button class="card-button">Join now</button>
                   </div>
                </div>

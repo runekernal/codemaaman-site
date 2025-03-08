@@ -30,7 +30,7 @@ window.addEventListener("scroll", function () {
 
 // TypeWriter
 const dynamicText = document.querySelector('.dynamic-text');
-const words = ["Grow.", "Innovate.", "Succeed.", "Collaborate."];
+const words = ["Grow.", "Innovate.", "Succeed."];
 let wordIndex = 0;
 let charIndex = 0;
 
@@ -63,8 +63,6 @@ typeEffect();
 const navbar = document.querySelector('.navbar');
 const links = document.querySelectorAll('.navbar .menu ul li a');
 const highlight = document.querySelector('.navbar .menu .highlight');
-
-links[0].classList.add('active');
 
 const activeNavButton = () => {
   const activeHash = window.location.hash;
@@ -106,8 +104,21 @@ function updateHashOnScroll() {
 }
 
 window.addEventListener("scroll", updateHashOnScroll);
-
-
-
 window.addEventListener("hashchange", activeNavButton);
 
+
+let aboutTabs = document.querySelectorAll('[data-tab-head]');
+let aboutContents = document.querySelectorAll('[data-tab-content]');
+aboutTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    aboutContents.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    let tabContent = document.querySelector(tab.dataset.tabHead);
+    tabContent.classList.toggle('active');
+    aboutTabs.forEach(tab => {
+      tab.classList.remove('active');
+    });
+    tab.classList.toggle('active');
+  });
+})
