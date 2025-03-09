@@ -106,7 +106,7 @@ nav.scrolled {
 
 .navbar .menu ul li a {
    text-decoration: none;
-   font-size: 1.8rem;
+   font-size: 1rem;
    color: var(--primary-font-color);
    transition: background-color 0.3s ease-in, color 0.3s ease-in;
    padding: 0.5rem 1rem;
