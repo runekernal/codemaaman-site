@@ -124,3 +124,5 @@ aboutTabs.forEach(tab => {
     tab.classList.toggle('active');
   });
 })
+
+
