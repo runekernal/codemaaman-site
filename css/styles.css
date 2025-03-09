@@ -15,7 +15,6 @@
 
 html {
    scroll-behavior: smooth;
-   scroll-padding: 10vh;
 }
 body {
    font-family: "Poppins", "Arial", sans-serif;
@@ -70,6 +69,7 @@ nav.scrolled {
    margin: 0 6rem 0 6rem;
    top: 2rem;
    border-radius: 50px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .logo {
@@ -114,12 +114,6 @@ nav.scrolled {
    color: #000000;
 }
 
-.navbar .menu ul li a.active {
-   border: 1px solid var(--secondary-color);
-   border-radius: 50px;
-   padding: 0.5rem 1rem;
-}
-
 /* Home Section */
 
 .home-section {
@@ -153,7 +147,7 @@ nav.scrolled {
 /* About Page */
 
 .about-section {
-   min-height: 90vh;
+   min-height: 100vh;
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -184,7 +178,7 @@ nav.scrolled {
    cursor: pointer;
    font-size: 1rem;
    text-align: center;
-   transition: (background-color color) 0.3s ease-in;
+   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .about-section ul li:not(:last-child){
@@ -202,6 +196,7 @@ nav.scrolled {
 
 [data-tab-content]{
    display: none;
+   transition: all 0.3s ease-in;
 }
 
 [data-tab-content].active{
@@ -211,7 +206,6 @@ nav.scrolled {
 }
 
 [data-tab-content] lord-icon {
-   width: 50vw;
    height: 50vh;
    flex: 1;
 }
@@ -228,11 +222,108 @@ nav.scrolled {
 
 .event-section {
    min-height: 100vh;
-   display: grid;
-   grid-template-columns: 1fr;
-   grid-template-rows: 1fr 10fr;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
    align-items: center;
-   clear: var(--primary-font-color);
+   width: 100%;
+   margin-bottom: 5rem;
+}
+
+.event-section h1 {
+   font-size: 3rem;
+   font-weight: 600;
+   padding: 30px;
+   line-height: 1.2;
+   color: var(--primary-font-color);
+}
+
+.event-section .event-cards {
+   display: flex;
+   gap: 30px;
+   overflow-x: auto;
+   padding: 20px;
+   max-width: 80vw;
+}
+
+.event-section .event-cards .card {
+   display: flex;
+   border: 1px solid var(--secondary-color);
+   flex-direction: column;
+   min-width: 300px;
+   max-width: 300px;
+   border-radius: 30px;
+   max-height: 550px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   transition: box-shadow 0.1s ease-in;
+}
+
+.event-section .event-cards .card:hover {
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-section .event-cards .card img {
+   width: 100%;
+   aspect-ratio: 4 / 3;
+   object-fit: cover;
+   border-radius: 30px 30px 0 0;
+   border-bottom: 1px solid var(--secondary-color);
+
+}
+
+.event-section .event-cards .card .card-contents {
+   padding: 10px 20px;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   gap: 10px;
+}
+
+.event-section .event-cards .card .card-contents h2 {
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+
+.event-section .event-cards .card .card-contents .details {
+   font-size: 1rem;
+   font-weight: 500;
+   overflow: hidden;
+}
+
+.event-cards .card button {
+   font-size: 1.5rem;
+   font-weight: 700;
+   height: 8rem;
+   background-color: none;
+   border-radius: 0 0 30px 30px;
+   border: none;
+   border-top: 1px solid var(--secondary-color);
+   transition: all 0.1s ease-in;
+   cursor: pointer;
+}
+
+.event-cards .card button:hover {
+   background-color: var(--primary-font-color);
+   color: var(--background-color);
+}
+
+.event-cards .card .tags {
+   display: flex; 
+   gap: 10px;
+   flex-wrap: wrap;
+   align-items: start;
+   justify-content: start;
+}
+
+.event-cards .card .tags .tag {
+   font-size: .8rem;
+   border: 1px solid var(--secondary-color);
+   padding: 5px 10px;
+   border-radius: 20px;
+}
+
+.event-cards::-webkit-scrollbar {
+   display: none;
 }
 
 /* Contact Section */

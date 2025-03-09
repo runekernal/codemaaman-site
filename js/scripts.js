@@ -76,6 +76,7 @@ const activeNavButton = () => {
   });
 }
 
+// Nav updating
 
 let isScrolling;
 window.addEventListener("scroll", () => {
@@ -106,6 +107,7 @@ function updateHashOnScroll() {
 window.addEventListener("scroll", updateHashOnScroll);
 window.addEventListener("hashchange", activeNavButton);
 
+// About Tabs
 
 let aboutTabs = document.querySelectorAll('[data-tab-head]');
 let aboutContents = document.querySelectorAll('[data-tab-content]');
