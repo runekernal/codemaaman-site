@@ -87,10 +87,10 @@ nav.scrolled {
    font-size: 1.8rem;
 }
 
-.navbar .logo .logo-icon {
+.navbar .logo img {
    margin-right: 10px;
-   font-size: 1.8rem;
-   font-weight: bold;
+   height: max-content;
+   width: 15rem;
 }
 
 .navbar .menu ul {
@@ -110,14 +110,14 @@ nav.scrolled {
    color: var(--primary-font-color);
    transition: background-color 0.3s ease-in, color 0.3s ease-in;
    padding: 0.5rem 1rem;
-   border: 1px solid;
-   border-color: #00000000;
+   border: 1px solid #00000000;
    border-radius: 50px;
 }
 
 .navbar .menu ul li a.active {
    background-color: var(--primary-font-color);
    color: var(--background-color);
+   border: none;
 }
 
 /* Home Section */
@@ -344,5 +344,27 @@ nav.scrolled {
 }
 
 .contact-section .container h1 {
+   font-size: 3rem;
+   font-weight: 600;
+   padding: 30px;
+   line-height: 1.2;
+   color: var(--primary-font-color);
+
+}
+
+.contact-section .container .subheading {
+   font-size: 1rem;
+   font-weight: 500;
+
+}
+
+.contact-form {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.contact-form .form-group {
    
 }
