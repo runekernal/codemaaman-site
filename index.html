@@ -8,6 +8,11 @@
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
       />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      />
+
       <script src="https://cdn.lordicon.com/lordicon.js"></script>
       <title>CodeMaaman</title>
    </head>
@@ -16,7 +21,7 @@
       <!-- Navigation Bar -->
       <nav class="navbar">
          <div class="logo">
-            <img src="./assets/codemaaman.svg">
+            <img src="./assets/codemaaman.svg" />
          </div>
          <div class="menu">
             <ul>
@@ -221,12 +226,12 @@
                   We're here to help. Reach out to us for any questions or
                   inquiries.
                </p>
-
-               <div class="contact-content">
-                  <!-- Contact Form -->
-                  <div class="contact-form">
-                     <form action="#" method="POST">
-                        <div class="form-group">
+               <div class="contact-division">
+                  <div class="contact-content">
+                     <!-- Contact Form -->
+                     <div class="contact-form">
+                        <form action="#" method="POST">
+                           <h3>Send Us</h3>
                            <input
                               type="text"
                               id="name"
@@ -234,8 +239,7 @@
                               placeholder="Your Name"
                               required
                            />
-                        </div>
-                        <div class="form-group">
+
                            <input
                               type="email"
                               id="email"
@@ -243,8 +247,7 @@
                               placeholder="Your Email"
                               required
                            />
-                        </div>
-                        <div class="form-group">
+
                            <input
                               type="text"
                               id="subject"
@@ -252,8 +255,7 @@
                               placeholder="Subject"
                               required
                            />
-                        </div>
-                        <div class="form-group">
+
                            <textarea
                               id="message"
                               name="message"
@@ -261,13 +263,13 @@
                               placeholder="Your Message"
                               required
                            ></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                           Send Message
-                        </button>
-                     </form>
+                           <button type="submit" class="submit-btn">
+                              Send Message
+                           </button>
+                        </form>
+                     </div>
                   </div>
-
+                  <div class="seperator"></div>
                   <!-- Contact Information -->
                   <div class="contact-info">
                      <h3>Get in Touch</h3>
@@ -284,16 +286,14 @@
                         </li>
                         <li>
                            <i class="fas fa-map-marker-alt"></i>
-                           <span>123 Main Street, City, State, ZIP Code</span>
+                           <span>123 Main Street,<br>City,<br> State, <br>ZIP Code</span>
                         </li>
                      </ul>
 
                      <!-- Embedded Map -->
                      <div class="map">
                         <iframe
-                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.95373531531615!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f8c4f8f!2s123%20Main%20St%2C%20City%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1622549400555!5m2!1sen!2sus"
-                           width="100%"
-                           height="200"
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31210.48573856834!2d-122.406417!3d37.785134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3m2!1i1024!2i768!5e0!3m2!1sen!2sus!4v1678941878962!5m2!1sen!2sus&disableUi=true&style=element:all|geometry:fill|color:#eeeeee&style=element:all|geometry:stroke|color:#393e36|weight:1.5&style=element:labels|visibility:off&style=element:labels.icon|visibility:off"
                            style="border: 0"
                            allowfullscreen=""
                            loading="lazy"
