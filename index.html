@@ -13,7 +13,9 @@
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       />
 
-      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+      <!-- <script src="https://cdn.lordicon.com/lordicon.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+
       <title>CodeMaaman</title>
    </head>
 
@@ -47,7 +49,6 @@
                Code.<br />
                <span class="dynamic-text"></span><span class="cursor">|</span>
             </h1>
-
             <img src="assets/coding-light.svg" alt="" />
          </section>
 
@@ -61,7 +62,7 @@
             </ul>
             <div class="about-container">
                <div id="codemaaman" data-tab-content class="active">
-                  <lord-icon
+                  <lord-icon id="command-line"
                      src="assets/lotte/command-line.json"
                      trigger="loop"
                   ></lord-icon>
@@ -82,7 +83,7 @@
                   </p>
                </div>
                <div id="mission" data-tab-content>
-                  <lord-icon
+                  <lord-icon id="aim"
                      src="assets/lotte/aim.json"
                      trigger="loop"
                   ></lord-icon>
@@ -104,7 +105,7 @@
                   </p>
                </div>
                <div id="vision" data-tab-content>
-                  <lord-icon
+                  <lord-icon id="glasses"
                      src="assets/lotte/vision.json"
                      trigger="loop"
                   ></lord-icon>
@@ -227,7 +228,6 @@
                   inquiries.
                </p>
                <div class="contact-division">
-                  <div class="contact-content">
                      <!-- Contact Form -->
                      <div class="contact-form">
                         <form action="#" method="POST">
@@ -268,10 +268,9 @@
                            </button>
                         </form>
                      </div>
-                  </div>
-                  <div class="seperator"></div>
+                  <div class="sep-cont"><div class="seperator"></div></div>
                   <!-- Contact Information -->
-                  <div class="contact-info">
+                  <div class="cont-sep"><div class="contact-info">
                      <h3>Get in Touch</h3>
                      <ul>
                         <li>
@@ -302,6 +301,7 @@
                   </div>
                </div>
             </div>
+         </div>
          </section>
       </main>
 

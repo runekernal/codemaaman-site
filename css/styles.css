@@ -9,7 +9,8 @@
    --primary-font-color: #393e36;
    --inverted-font-color: var(--background-color);
    --inverted-background-color: var(--primary-font-color);
-   --secondary-color: #cccccc;
+   --secondary-color: #ccc;
+   --box-shadow-color: #3a3f371a;
 }
 * {
    margin: 0;
@@ -74,7 +75,7 @@ nav.scrolled {
    margin: 0 6rem 0 6rem;
    top: 2rem;
    border-radius: 50px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 10px var(--box-shadow-color);
 }
 
 .navbar .logo {
@@ -82,10 +83,6 @@ nav.scrolled {
    align-items: center;
 }
 
-.logo span {
-   font-weight: bold;
-   font-size: 1.8rem;
-}
 
 .navbar .logo img {
    margin-right: 10px;
@@ -260,12 +257,12 @@ nav.scrolled {
    max-width: 300px;
    border-radius: 30px;
    max-height: 550px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 10px var(--box-shadow-color);
    transition: box-shadow 0.1s ease-in;
 }
 
 .event-section .event-cards .card:hover {
-   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+   box-shadow: 10px 10px 10px var(--box-shadow-color);
 }
 
 .event-section .event-cards .card img {
@@ -306,6 +303,8 @@ nav.scrolled {
    border-top: 1px solid var(--secondary-color);
    transition: all 0.1s ease-in;
    cursor: pointer;
+   background-color: var(--background-color);
+   color: var(--primary-font-color);
 }
 
 .event-cards .card button:hover {
@@ -361,10 +360,8 @@ nav.scrolled {
    display: flex;
    align-items: center;
    justify-content: center;
-   flex: 1;
    padding: 1rem;
    flex-direction: column;
-   width: 100%;
 }
 
 .contact-form .form-group {
@@ -386,6 +383,7 @@ nav.scrolled {
    font-weight: 300;
    resize: none;
    transition: border 0.3s ease;
+   color: var(--primary-font-color);
 }
 
 
@@ -398,7 +396,7 @@ nav.scrolled {
 
 .contact-section .contact-form  button {
    padding: 10px 20px;
-   border: none;
+   border: 1px solid var(--secondary-color);
    background-color: var(--primary-font-color);
    color: var(--background-color);
    font-size: 1rem;
@@ -407,8 +405,13 @@ nav.scrolled {
    cursor: pointer;
    margin-top: 1rem;
    margin-bottom: 1rem;
+   transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
+.contact-section .contact-form button:hover {
+   background-color: var(--background-color);
+   color: var(--primary-font-color);
+}
 .contact-form form {
    border: 1px solid var(--secondary-color);
    border-radius: 20px;
@@ -416,6 +419,7 @@ nav.scrolled {
    display: flex;
    flex-direction: column;
    align-items: center;
+   width: 17.5rem;
 }
 
 .contact-form form h3 {
@@ -432,6 +436,8 @@ nav.scrolled {
    width: 100%;
    gap: 6rem;
    padding: 1rem;
+   align-items: center;
+   justify-content: center;
 }
 
 .container {
@@ -460,6 +466,7 @@ nav.scrolled {
    font-weight: 600;
    padding-bottom: 1rem;
    color: var(--primary-font-color);
+   
 }
 
 .contact-section .contact-info {
@@ -495,6 +502,7 @@ nav.scrolled {
    padding: 0;
    border: 1px solid var(--secondary-color);
    border-radius: 20px;
+   overflow: hidden;
 }
 .map iframe {
    border-radius: 20px;
@@ -517,6 +525,10 @@ nav.scrolled {
       display: none;
    }
    
+   .navbar .logo img{
+      width: 10rem;
+   }
+   
    nav.scrolled {
       padding-left: 2rem;
       padding-right: 2rem;
@@ -524,23 +536,30 @@ nav.scrolled {
    }
 
    .home-section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
       align-items: start;
-      gap: 20vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
    }
 
    .home-section img {
+      height: max-content;
       width: 80vw;
-      padding-top: 5rem;
-      order: 1;
+      padding: 2rem;
    }
 
    .home-section h1 {
       font-size: 10vw;
-      order: 2;
-      padding-left: 5rem;
+      padding-left: 7rem;
+      align-items: center;
+      margin-top: 17vh;
+   }
+
+   .home-section p {
+      display: none;
    }
 
    /* About */
@@ -558,8 +577,30 @@ nav.scrolled {
       text-align: center;
    }
 
+   .about-section ul {
+      min-width: 100%;
+   }
+
    /* Contact */
 
-   
+   .contact-section .contact-division {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+   }
+
+   .seperator {
+      display: none;
+   }
+
+   .container p {
+      text-align: center;
+   }
+
+   .container {
+      padding-bottom: 3rem;
+   }
 
 }

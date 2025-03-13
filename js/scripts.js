@@ -1,19 +1,76 @@
+let glasses = document.querySelector("#glasses");
+let aim = document.querySelector("#aim");
+let commandLine = document.querySelector("#command-line");
+let glassesAnimation, aimAnimation, commandLineAnimation;
+
+const animationPaths = {
+  light: {
+    glasses: './assets/lotte/vision.json',
+    aim: './assets/lotte/aim.json',
+    commandLine: './assets/lotte/command-line.json'
+  },
+  dark: {
+    glasses: './assets/lotte/vision-dark.json',
+    aim: './assets/lotte/aim-dark.json',
+    commandLine: './assets/lotte/command-line-dark.json'
+  }
+};
+
+
+function loadAnimation(container, path) {
+  return lottie.loadAnimation({
+    container: container,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: path
+  });
+}
+
+glassesAnimation = loadAnimation(glasses, animationPaths.light.glasses);
+aimAnimation = loadAnimation(aim, animationPaths.light.aim);
+commandLineAnimation = loadAnimation(commandLine, animationPaths.light.commandLine);
 
 // Dark Mode Toggle
 let isDarkModeOn = false;
 const darkModeIcon = document.getElementById('dark-mode-icon');
 darkModeIcon.addEventListener('click', () => {
   isDarkModeOn = !isDarkModeOn;
+  currentTheme = isDarkModeOn ? 'dark' : 'light';
   if (isDarkModeOn) {
 
-    document.documentElement.style.setProperty("--background-color", "black");
-    document.documentElement.style.setProperty("--primary-font-color", "#EEEEEE");
+    document.documentElement.style.setProperty("--background-color", "#121212");
+    document.documentElement.style.setProperty("--primary-font-color", "#FCFAFB");
+    document.documentElement.style.setProperty("--secondary-color", "#3B3B3B");
+    document.documentElement.style.setProperty("--box-shadow-color", "#fcfafba");
     darkModeIcon.classList.replace('ri-moon-line', 'ri-sun-line');
+    document.querySelector(".logo img").src = "./assets/codemaaman-dark.svg";
+    glassesAnimation.destroy();
+    aimAnimation.destroy();
+    commandLineAnimation.destroy();
+    glassesAnimation = loadAnimation(glasses, animationPaths.dark.glasses);
+    aimAnimation = loadAnimation(aim, animationPaths.dark.aim);
+    commandLineAnimation = loadAnimation(commandLine, animationPaths.dark.commandLine);
+    document.querySelector('.home-section img').src = './assets/coding-dark.svg';
+
+
 
   } else {
     document.documentElement.style.setProperty("--background-color", "#EEEEEE");
     document.documentElement.style.setProperty("--primary-font-color", "#393E46")
+    document.documentElement.style.setProperty("--secondary-color", "#cccccc");
+    document.documentElement.style.setProperty("--box-shadow-color", "#393E461a");
     darkModeIcon.classList.replace('ri-sun-line', 'ri-moon-line');
+    document.querySelector(".logo img").src = "./assets/codemaaman.svg";
+    glassesAnimation.destroy();
+    aimAnimation.destroy();
+    commandLineAnimation.destroy();
+    glassesAnimation = loadAnimation(glasses, animationPaths.light.glasses);
+    aimAnimation = loadAnimation(aim, animationPaths.light.aim);
+    commandLineAnimation = loadAnimation(commandLine, animationPaths.light.commandLine);
+    document.querySelector('.home-section img').src = './assets/coding-light.svg';
+
+
   }
 });
 
