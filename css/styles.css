@@ -19,14 +19,13 @@
 
 html {
    scroll-behavior: smooth;
-
 }
 body {
    font-family: "Poppins", "Arial", sans-serif;
    font-weight: 400;
    background-color: var(--background-color);
    color: var(--primary-font-color);
-   transition: background-color 0.4s ease-in, color 0.4s ease-in;
+   transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 body.dark-mode {
@@ -65,7 +64,7 @@ main {
    padding-left: 10rem;
    padding-right: 10rem;
    z-index: 1000;
-   transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in;
 }
 
 nav.scrolled {
@@ -296,18 +295,18 @@ nav.scrolled {
 .event-cards .card button {
    font-size: 1.5rem;
    font-weight: 700;
-   height: 8rem;
-   background-color: none;
+   height: 8rem;;
    border-radius: 0 0 30px 30px;
+   background-color: var(--background-color);
    border: none;
    border-top: 1px solid var(--secondary-color);
-   transition: all 0.1s ease-in;
+   transition: background-color 0.3s ease-in, color 0.3s ease-in,;
    cursor: pointer;
-   background-color: var(--background-color);
    color: var(--primary-font-color);
 }
 
 .event-cards .card button:hover {
+   transition: background-color 0.1s ease-in, color 0.1s ease-in;
    background-color: var(--primary-font-color);
    color: var(--background-color);
 }
@@ -382,7 +381,7 @@ nav.scrolled {
    background-color: var(--background-color);
    font-weight: 300;
    resize: none;
-   transition: border 0.3s ease;
+   transition: border 0.3s ease, background-color 0.3s ease-in;
    color: var(--primary-font-color);
 }
 
